@@ -48,7 +48,6 @@ var search_1 = function (nums, target) {
     }
 
     var binarySearchByPosition = function (start, end) {
-
         while (start <= end) {
             let middle = parseInt(start + (end - start) / 2);
 
@@ -84,7 +83,7 @@ var search = function (nums, target) {
     let start = 0,
         end = nums.length - 1;
     while (start <= end) {
-        let mid = start + (end - start) / 2;
+        let mid = parseInt(start + (end - start) / 2);
         if (target == nums[mid])
             return mid;
         else if (nums[start] <= nums[mid]) {
@@ -93,7 +92,7 @@ var search = function (nums, target) {
             else
                 start = mid + 1;
         } else {
-            if (target <= nums[end] && target > nums[mid])
+            if (target > nums[mid] && target <= nums[end])
                 start = mid + 1;
             else
                 end = mid - 1;
@@ -102,9 +101,6 @@ var search = function (nums, target) {
     return -1;
 }
 
-
-
-
-console.log(search([4, 5, 6, 7, 0, 1, 2], 0)) // 4
-console.log(search([4, 5, 6, 7, 0, 1, 2], 3)) // -1
-console.log(search([3, 1], 1)) // -1
+// console.log(search([4, 5, 6, 7, 0, 1, 2], 0)) // 4
+// console.log(search([4, 5, 6, 7, 0, 1, 2], 3)) // -1
+console.log(search([3, 1], 1)) // 0
