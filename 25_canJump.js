@@ -85,7 +85,7 @@ var canJump_Top_Down = function (nums) {
  * @param {number[]} nums
  * @return {boolean}
  */
-var canJump = function (nums) {
+var canJump_Bottom_Up = function (nums) {
     let lastIndex = nums.length - 1;
     let State = {
         Good: 'Good',
