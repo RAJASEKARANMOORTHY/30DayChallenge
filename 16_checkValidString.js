@@ -46,13 +46,13 @@ var checkValidString = function (s) {
     return start == 0;
 };
 
-checkValidString("()");
-checkValidString("(*)"); // start = Math.max(start, 0;
-checkValidString(")"); // end < 0 -> Break
-checkValidString("*)");
-checkValidString("(*");
-checkValidString("()()");
-checkValidString("(()");
-checkValidString("(*))");
-checkValidString("((*)");
-checkValidString("***");
+// checkValidString("()");
+// checkValidString("(*)"); // Reset the start when negative;
+// checkValidString(")"); // end < 0 -> Break
+// checkValidString("*)");
+// checkValidString("(*");
+// checkValidString("()()");
+// checkValidString("(()");
+// checkValidString("(*))");
+// checkValidString("((*)");
+// checkValidString("***");
